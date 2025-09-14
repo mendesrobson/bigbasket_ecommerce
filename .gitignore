@@ -25,6 +25,7 @@ yarn-debug.log
 
 # Visual Studio Code
 # See https://code.visualstudio.com/docs/editor/versioncontrol#_git-support
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json

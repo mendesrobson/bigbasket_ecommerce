@@ -1,0 +1,24 @@
+Admin:
+    category (crud)
+    products (crud)
+
+    carts
+    customers
+    orders
+
+    login
+
+Website:
+
+    categories
+    products
+    signup e login => model popup
+    add e cart
+    cart
+    orders
+
+    landing page
+    product page
+    cart page
+    checkout
+    order
