@@ -8,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class Products {
 
+  isSidePanelVisible: boolean = false;
+
+  openSidePanel(){
+    this.isSidePanelVisible = true;
+  }
+
+  closeSidePanel(){
+    this.isSidePanelVisible = false;
+  }
+
 }
