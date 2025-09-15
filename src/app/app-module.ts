@@ -15,6 +15,7 @@ import { CategoryProducts } from './pages/website/category-products/category-pro
 import { CustomerCart } from './pages/website/customer-cart/customer-cart';
 import { Checkout } from './pages/website/checkout/checkout';
 import { CustomerOrders } from './pages/website/customer-orders/customer-orders';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { CustomerOrders } from './pages/website/customer-orders/customer-orders'
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [
