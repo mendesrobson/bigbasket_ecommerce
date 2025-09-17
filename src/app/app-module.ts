@@ -16,6 +16,7 @@ import { CustomerCart } from './pages/website/customer-cart/customer-cart';
 import { Checkout } from './pages/website/checkout/checkout';
 import { CustomerOrders } from './pages/website/customer-orders/customer-orders';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule
   ],
   providers: [
+    provideHttpClient(withInterceptorsFromDi()),
     provideBrowserGlobalErrorListeners(),
     provideClientHydration(withEventReplay())
   ],
