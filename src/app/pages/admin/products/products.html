@@ -19,7 +19,8 @@
               <div class="card-body">
                 <h4 class="card-title">{{product.productName}}</h4>
                 <p class="card-text">{{product.categortyName}}</p>
-                <a href="#" class="btn btn-primary">See Profile</a>
+                <a class="btn btn-primary" (click)="onEdit(product)">Edit</a>
+                <a href="#" class="btn btn-danger mx-2" (click)="onDelete(product)">Delete</a>
               </div>
             </div>
           </div>
@@ -82,12 +83,13 @@
             <textarea row="4" type="text" [(ngModel)]="productObj.productDescription" class="form-control"></textarea>
           </div>
         </div>
-        <div class="row">
-          <div class="col-6">
+        <div class="row pt-2">
+          <div class="col-6 text-center">
             <button class="btn btn-sm btn-success">Reset</button>
           </div>
-          <div class="col-6">
-            <button class="btn btn-sm btn-success" (click)="onSave()">Creat Product</button>
+          <div class="col-6 text-center">
+            <button class="btn btn-sm btn-success" *ngIf="productObj.productId == 0" (click)="onSave()">Creat Product</button>
+            <button class="btn btn-sm btn-primary" *ngIf="productObj.productId != 0" (click)="onUpdate()">Update Product</button>
           </div>
         </div>
       </div>

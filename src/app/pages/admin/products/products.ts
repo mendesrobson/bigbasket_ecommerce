@@ -53,13 +53,41 @@ export class Products implements OnInit {
       debugger;
       if(res.result){
         this.getAllProducts();
-        alert("Product saved successfully")
       }else{
         alert(res.message)
       }
     })
   }
 
+  onUpdate(){
+      this.productSrv.updateProducts(this.productObj).subscribe((res: any) => {
+      debugger;
+      if(res.result){
+        this.getAllProducts();
+      }else{
+        alert(res.message)
+      }
+    })
+  }
+
+  onDelete(item :any){
+    const isDelete = confirm('Deseja deletar o produto?');
+    if (isDelete) {
+      this.productSrv.deleteProducts(item.productId).subscribe((res: any) => {
+      debugger;
+      if(res.result){
+        this.getAllProducts();
+      }else{
+        alert(res.message)
+      }
+    })
+    }
+  }
+
+  onEdit(item: any){
+    this.productObj = item;
+    this.openSidePanel();
+  }
 
   openSidePanel(){
     this.isSidePanelVisible = true;

@@ -20,4 +20,12 @@ export class ProductService {
     return this.http.post(Constant.API_ENDPOINT + Constant.METHODS.CREATE_PRODUCT, obj)
   }
 
+  updateProducts(obj: any){
+    return this.http.post(Constant.API_ENDPOINT + Constant.METHODS.UPDATE_PRODUCT, obj)
+  }
+
+  deleteProducts(id: any){
+    return this.http.get(Constant.API_ENDPOINT + Constant.METHODS.DELETE_PRODUCT + id)
+  }
+
 }
